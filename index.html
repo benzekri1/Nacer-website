@@ -61,7 +61,7 @@
       margin: auto;
       color: white;
     }
-    .services h2, .about h2, .contact h2, .gallery h2 {
+    .services h2, .about h2, .contact h2, .gallery h2, .customers h2 {
       color: #d4af37;
       border-bottom: 2px solid #d4af37;
       padding-bottom: 10px;
@@ -128,6 +128,39 @@
       text-align: center;
       padding: 20px;
     }
+
+    /* NEW CUSTOMER SECTION STYLES */
+    .customers {
+      padding: 40px 20px;
+      text-align: center;
+      background: #0c0f14;
+      color: #d4af37;
+    }
+
+    .logo-slider {
+      overflow: hidden;
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .logo-track {
+      display: flex;
+      width: calc(250px * 10);
+      animation: scroll 30s linear infinite;
+    }
+
+    .logo-track img {
+      height: 80px;
+      margin: 0 20px;
+      object-fit: contain;
+      filter: brightness(0) invert(1); /* Makes logos white */
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
   </style>
 </head>
 <body>
@@ -180,6 +213,23 @@
     <p>Phone: (202) 555-0199</p>
     <p>Service Area: Virginia, Maryland & Washington, D.C.</p>
   </section>
+
+  <!-- NEW CUSTOMER SECTION -->
+  <section id="customers" class="customers">
+    <h2>Our Customers</h2>
+    <div class="logo-slider">
+      <div class="logo-track">
+        <img src="donaldson.png" alt="donaldson">
+        <img src="Berkshire.png" alt="Berkshire">
+        <img src="Gables.png" alt="Gables">
+        <!-- Duplicates for smooth scroll -->
+        <img src="donaldson.png" alt="donaldson">
+        <img src="Berkshire.png" alt="Berkshire">
+        <img src="Gables.png" alt="Gables">
+      </div>
+    </div>
+  </section>
+
   <footer>
     &copy; 2025 Nacer Home Improvement. All rights reserved.
   </footer>
